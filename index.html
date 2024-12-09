@@ -219,6 +219,82 @@
         border-radius: 6px;
         border: 1px solid black;
       }
+      .invTooltip {
+        position: absolute;
+        top: 25%;
+        left: 105%;
+        z-index: 1;
+        visibility: hidden;
+        width: 200px;
+        background-color: wheat;
+        color: black;
+        text-align: left;
+        padding: 5px;
+        border-radius: 6px;
+        border: 1px solid black;
+      }
+      .fieldTooltip {
+        position: absolute;
+        top: 25%;
+        left: 105%;
+        z-index: 1;
+        visibility: hidden;
+        width: 200px;
+        background-color: wheat;
+        color: black;
+        text-align: left;
+        padding: 5px;
+        border-radius: 6px;
+        border: 1px solid black;
+      }
+      .suptooltip::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent wheat;
+      }
+      .invTooltip:: after {
+        content: " ";
+        position: absolute;
+        top: 50px;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent wheat transparent transparent;
+      }
+      .fieldTooltip::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent wheat transparent transparent;
+      }
+      .supplyItemDiv:hover .supTooltip {
+        visibility: visible;
+      }
+      .invItemDiv:hover .invTooltip {
+        visibility: visible;
+      }
+      .fieldItemDiv:hover .fieldTooltip {
+        visibility: visible;
+      }
     </style>
   </head>
+  <body>
+    <div id="logo"><img id="logoImg" src="logo_350.png"</div>
+    <img id="helpButton" src="help_32.png">
+    <div id="helpModal" class="helpModal">
+      <div class="helpModalContent">
+        <span id="modalClose">&times;</span>
+        <h3 style="text-align: center;">Instructions</h3>
+      </div>
+  </body>
 </html>
